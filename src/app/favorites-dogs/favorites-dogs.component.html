@@ -1,0 +1,8 @@
+<div class="body">
+    <div *ngIf="favorites?.length" class="favorite">
+        <div *ngFor="let favorit of favorites" class="img-field">
+            <img class="image" src="{{favorit.image}}">
+            <button class="delete" (click)="deleteDogfromFavorites(favorit)">X</button>
+        </div>
+    </div>
+</div>

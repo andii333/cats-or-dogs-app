@@ -1,0 +1,184 @@
+header {
+    width: 100%;
+    display: flex;
+    
+}
+button{
+    cursor: pointer;
+}
+
+.input-field {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 1% 4% ;
+    display: flex;
+    width: 40%;
+    height: 4vh;
+    position: relative;
+}
+
+.mat-form-field{
+  position: absolute;
+  top: -20%;
+}
+
+.ng-star-inserted mat-select{
+font-size: 1.2em;
+width: 120%;
+}
+
+.to-search {
+    background-color: #FBE0DC;
+    border: none;
+    border-radius: 10px;
+    padding: 2% 1% 1% 2%; 
+    position: absolute;
+    right: 5%;
+}
+
+.like {
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    font-size:1.5em;
+}
+
+.cat{
+    border: 3px solid orange;
+}
+.dog{
+    border: 3px solid brown;
+}
+
+/* ---------------------------- main ----------------------------------- */
+
+main {
+    border-radius: 10px;
+    background-color: white;
+    width: 95%;
+    margin-top: 2%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    margin: 4% 0 1% 8%;
+    justify-content: center;
+}
+
+.previously {
+    background: #FBE0DC;
+    border-radius: 10px;
+    padding: 1% 1% 0 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    margin: 2%;
+}
+
+.previously-img {
+    width: 1vw;
+    height: 2vw;
+}
+
+.breeds-name {
+    background: #FF868E;
+    border-radius: 10px;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    margin: 2%;
+}
+
+.link-voting {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+
+.img-cat {
+    width: 80%;
+    border-radius: 10px;
+    /* height: 80%; */
+}
+
+.field {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+    position: relative;
+}
+
+.turn{
+    border-radius: 10px;
+    border: 1px solid #FF868E;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3vw;
+    height: 4vw;
+    margin: 2%;
+    position: fixed;
+}
+
+.left{top: 40%;
+    left:39%}
+
+.right{
+    transform: rotate(180deg);
+        top: 40%;
+        right: 2%
+}
+
+.add-likes-box {
+    display: flex;
+    width: 15vw;
+    height: 4vw;
+    position: absolute;
+    bottom: -2vw;
+    border: 1px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.add-like {
+    background-color: #97EAB9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    border: none;
+}
+
+.add-heart {
+    background-color: #FF868E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    border: none;
+    color: white;
+}
+
+.add-dislike {
+    background-color: #fadda6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    border: none
+}
+
+.image-action{
+    height: 20vh;
+overflow: scroll;
+overflow-x: hidden;
+}

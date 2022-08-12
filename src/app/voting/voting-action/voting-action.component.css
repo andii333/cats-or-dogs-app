@@ -1,0 +1,19 @@
+.row-like {
+    margin: 2% 8%;
+    color: gray;
+    position: relative;
+    width: 85%;
+}
+
+.time {
+    margin-right: 4%;
+}
+
+.black {
+    color: black;
+}
+
+.little-icon {
+    position: absolute;
+    right: 0;
+}

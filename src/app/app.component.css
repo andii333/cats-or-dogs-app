@@ -1,0 +1,114 @@
+.container {
+    margin: 2% 0 2% 2%;
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* ---------------------------- left side ---------------------------------- */
+
+.welcome-left {
+    margin: 0 1%;
+    width: 30%;
+    position: fixed;
+}
+
+.cat-app{
+font-size: 1.3em;
+color:#ff5c66;
+}
+
+.welcome-welcome {
+    font-size: 2em;
+    margin: 20% 0 0 0;
+}
+
+.img-link {
+    width: 100%;
+}
+
+.img-link-blue {
+    background-color: rgb(195, 195, 253);
+    border-radius: 10%;
+    width: 100%;
+    border: 3px solid rgb(216, 216, 253);
+}
+
+.img-link-green {
+    background-color: rgb(159, 250, 192);
+    border-radius: 10%;
+    width: 100%;
+    border: 3px solid rgb(197, 253, 218);
+}
+
+.img-link-yellow {
+    background-color: rgb(222, 222, 123);
+    border-radius: 10%;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgba(255, 255, 224, 0.712);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.heart{
+width: 120%;
+padding-left: 10%;
+}
+
+.welcome-lets {
+    margin: 15% 0 4% 20% ;
+    font-size: 1.5em;
+    color: rgba(248, 44, 21, 0.712);
+}
+
+.welcome-links {
+    display: flex;
+}
+
+.welcome-link-text {
+    color: rgba(248, 44, 21, 0.712);
+    letter-spacing: 3px;
+    margin: 5%;
+    border-radius: 15%;
+    background-color: white;
+    padding: 3% 6%;
+    width: 90%;
+    text-align: center;
+    font-size: 100;
+}
+
+.welcome-link-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    margin-right: 5%;
+}
+
+.welcome-link-div:hover .welcome-link-text {
+    background-color: rgb(250, 200, 181);
+}
+
+.welcome-link-div:hover .img-link-picture {
+    border: none
+}
+
+.welcome-link-div:active .welcome-link-text {
+    background-color: rgb(203, 83, 36);
+    color: white
+}
+
+.welcome-link-div:active .img-link-picture {
+    border: 3px solid rgba(239, 170, 128, 0.712)
+}
+
+/* ------------------------------------ right side -------------------------------------------------- */
+
+.right{
+    width: 60%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 2%;
+}
