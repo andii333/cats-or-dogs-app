@@ -1,35 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import { CountService } from '../count.service';
 import { ServiceService } from '../service.service';
 import { AnimalClass } from '../voting/animalClass';
 
 @Component({
-  selector: 'app-favorites-dogs',
-  templateUrl: './favorites-dogs.component.html',
-  styleUrls: ['./favorites-dogs.component.css']
+  selector: 'app-favorites-cats',
+  templateUrl: './favorites-cats.component.html',
+  styleUrls: ['./favorites-cats.component.css']
 })
-export class FavoritesDogsComponent implements OnInit {
+export class FavoritesCatsComponent implements OnInit {
   favorites: AnimalClass[];
   likes: AnimalClass[];
 
   constructor(public service: ServiceService) { }
 
   ngOnInit(): void {
-    this.favorites = JSON.parse(localStorage.getItem(("favoritesDogs")) as string);
-    this.likes = JSON.parse(localStorage.getItem(("likesDog")) as string);
+    this.favorites = JSON.parse(localStorage.getItem(("favoritesCats")) as string);
+    this.likes = JSON.parse(localStorage.getItem(("likesCat")) as string);
     this.likes.forEach((l) => {
       this.favorites.forEach((f) => {
         if (l.name === f.name) {
           f.dislike = l.dislike;
           f.like = l.like;
-        }
+         } 
       }
       )
     })
   }
 
-  deleteDogfromFavorites(del: any) {
+  deleteCatfromFavorites(del: any) {
     const index = this.favorites.findIndex((e: { name: any; }) => e === del);
     this.favorites.splice(index, 1)
-    localStorage.setItem("favoritesDogs", JSON.stringify(this.favorites))
+    localStorage.setItem("favoritesCats", JSON.stringify(this.favorites))
   }
 }

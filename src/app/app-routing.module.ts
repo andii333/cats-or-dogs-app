@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { ChildrenOutletContexts, RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { FavoritesCatsComponent } from './favorite/favorites-cats.component';
+import { FavoritesCatsComponent } from './favorite-cat/favorites-cats.component';
 import { FavoritesDogsComponent } from './favorites-dogs/favorites-dogs.component';
 import { VotingComponent } from './voting/voting.component';
 import { WelcomeComponent } from './welcome/welcome.component';

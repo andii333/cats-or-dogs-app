@@ -1,4 +1,4 @@
-<div *ngIf="votingAction.destination === 'like'">
+<div *ngIf="votingAction.destination === 'like'" class="messages">
     <p class="row-like">
 <b><span class="time black">{{date | date: 'dd.MM h:mm'}}</span></b> Image 
 <b class="black">{{breedName}}</b> was added Like
@@ -11,7 +11,7 @@
 </div>
 
 
-<div *ngIf="votingAction.destination === 'favorite'">
+<div *ngIf="votingAction.destination === 'favorite'" class="messages">
 <p class="row-like">
 <b><span class="time black">{{date | date: 'dd.MM h:mm'}}</span></b> Image 
 <b class="black">{{breedName}}</b> was added to Favorites
@@ -23,7 +23,7 @@
 </p>
 </div>
 
-<div *ngIf="votingAction.destination === 'notFavorite'">
+<div *ngIf="votingAction.destination === 'notFavorite'" class="messages">
 <p class="row-like">
 <b><span class="time black">{{date | date: 'dd.MM h:mm'}}</span></b> Image 
 <b class="black">{{breedName}}</b> was removed from Favorites
@@ -36,7 +36,7 @@
 </div>
 
 
-<div *ngIf="votingAction.destination === 'dislike'">
+<div *ngIf="votingAction.destination === 'dislike'" class="messages">
     <p class="row-like">
         <b><span class="time black">{{date | date: 'dd.MM h:mm'}}</span></b> Image 
         <b class="black">{{breedName}}</b> was added Dislike

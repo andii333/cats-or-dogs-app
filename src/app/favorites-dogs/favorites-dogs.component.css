@@ -15,7 +15,7 @@
     display: flex;
     position: relative;
     width: min-content;
-    margin: 0.5%;
+    margin: 3% 0;
 }
 
 .image:active {
@@ -46,4 +46,42 @@
     color: red;
     padding: 0;
     font-size: 1em;
+}
+
+.like-box {
+    width: 2vw;
+    height: 3vw;
+    position: absolute;
+    font-size: 1em;
+    display: flex;
+}
+
+.box-img {
+    width: 2vw;
+    height: 2vw;
+    margin-right: 0.5vw;
+}
+
+.like-img {
+    right: 63%;
+    bottom: -21%;
+}
+
+.dislike-img {
+    right: 31%;
+    bottom: -21%;
+}
+
+.like {
+    width: 2vw;
+    right: 63%;
+    bottom: -21%;
+    color: rgb(10, 179, 10);
+}
+
+.dislike {
+    width: 2vw;
+    right: 31%;
+    bottom: -21%;
+    color: rgb(209, 18, 18);
 }

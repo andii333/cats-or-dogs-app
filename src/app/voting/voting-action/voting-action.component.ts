@@ -13,8 +13,8 @@ export class VotingActionComponent implements OnInit {
   @Input()
   votingAction: VotingAction;
   date: Date = new Date();
-  catId: any []
-  breedName:string
+  catId: string;
+  breedName:string;
 
   constructor(public service: ServiceService) {
   }
@@ -22,8 +22,8 @@ export class VotingActionComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.catId = this.service.chooseAnimal.id
-    this.breedName = this.service.chooseAnimal.name
+    this.catId = this.service.chooseAnimal.id;
+    this.breedName = this.service.chooseAnimal.name;
   }
 
 }

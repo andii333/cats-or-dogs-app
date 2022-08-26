@@ -2,18 +2,22 @@ import { Injectable } from "@angular/core";
 
 
 @Injectable()
-export class CountService{
-getLikeCats(){
- return  JSON.parse(localStorage.getItem("likesCat") as string)
-}
-addLikeCats(event:[]){
-    localStorage.setItem("likesCat", JSON.stringify(event))
-}
+export class CountService {
+    chooseAnimalType = true;
 
-getLikeDogs(){
- return  JSON.parse(localStorage.getItem("likesDog") as string)
-}
-addLikeDogs(event:[]){
-    localStorage.setItem("likesDog", JSON.stringify(event))
-}
+    getLike() {
+        if (this.chooseAnimalType) {
+            return JSON.parse(localStorage.getItem("likesCat") as string)
+        } else {
+            return JSON.parse(localStorage.getItem("likesDog") as string)
+        }
+
+    }
+    addLike(event: []) {
+        if (this.chooseAnimalType) {
+            localStorage.setItem("likesCat", JSON.stringify(event))
+        } else {
+            localStorage.setItem("likesDog", JSON.stringify(event))
+        }
+    }
 }

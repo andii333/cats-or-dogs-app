@@ -182,3 +182,7 @@ main {
 overflow: scroll;
 overflow-x: hidden;
 }
+
+.image-action::-webkit-scrollbar {
+    display: none;
+}

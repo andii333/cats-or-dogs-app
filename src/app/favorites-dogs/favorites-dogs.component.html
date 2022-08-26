@@ -1,8 +1,12 @@
 <div class="body">
     <div *ngIf="favorites?.length" class="favorite">
-        <div *ngFor="let favorit of favorites" class="img-field">
+        <div *ngFor="let favorit of favorites" #favorit class="img-field">
             <img class="image" src="{{favorit.image}}">
             <button class="delete" (click)="deleteDogfromFavorites(favorit)">X</button>
+            <div class="like like-box"><img src="../../assets/like.png" alt="like" class="like-img box-img">
+                {{favorit.like}}</div>
+            <div class="dislike like-box"><img src="../../assets/dislike.png" alt="like" class="dislike-img box-img">
+                {{favorit.dislike}}</div>
         </div>
     </div>
 </div>

@@ -3,6 +3,7 @@
     color: gray;
     position: relative;
     width: 85%;
+
 }
 
 .time {
@@ -17,3 +18,11 @@
     position: absolute;
     right: 0;
 }
+
+/* .messages{
+    position: absolute;
+        top: 3em;
+        bottom: 0;
+        left: 0;
+        right: -17px;
+} */
