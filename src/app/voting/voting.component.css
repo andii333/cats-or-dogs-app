@@ -10,21 +10,12 @@ button{
 .input-field {
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    padding: 1% 4% ;
+    padding: 0 4% 0 4% ;
     display: flex;
+    align-items: center;
     width: 40%;
-    height: 4vh;
+    height: 8vh;
     position: relative;
-}
-
-.mat-form-field{
-  position: absolute;
-  top: -20%;
-}
-
-.ng-star-inserted mat-select{
-font-size: 1.2em;
-width: 120%;
 }
 
 .to-search {
@@ -106,7 +97,6 @@ main {
 .img-cat {
     width: 80%;
     border-radius: 10px;
-    /* height: 80%; */
 }
 
 .field {
@@ -185,4 +175,63 @@ overflow-x: hidden;
 
 .image-action::-webkit-scrollbar {
     display: none;
+}
+
+/* -----------------------------------media------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+.input-field {
+        width: fit-content;
+        height: auto;
+    }
+.to-search {
+    padding: 1% 1% 0 1%;
+    right: 1%;
+}
+
+.like {
+    font-size: 1.2em;
+}
+.breeds-name {
+   font-size: 1rem;
+    width: fit-content;
+}
+
+.turn {
+    width:10vw;
+    height:10vw;
+}
+
+.left {
+    top: 80%;
+    left:0
+}
+
+.right {
+    top: 80%;
+    right: 2%
+}
+
+.add-likes-box {
+    width: 30vw;
+    height: 10vw;
+    bottom: -10vw;
+}
+
+.add-like {
+    width: 10vw;
+}
+
+.add-heart {
+width: 10vw;
+}
+
+.add-dislike {
+width: 10vw;
+}
+
+.image-action {
+    margin-top: 10vw;
+}
+
 }

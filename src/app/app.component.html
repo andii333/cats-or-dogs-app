@@ -2,8 +2,10 @@
   <div class="container">
 
     <div class="welcome-left">
-      <h1 class="cat-app">Cat 🐱 
-       or Dog 🐶 App</h1>
+      <!-- [ngClass]="{'show':active,'hidden':!active}" -->
+
+      <h1 class="cat-app">Cat 🐱
+        or Dog 🐶 App</h1>
       <h2 class="welcome-welcome">Welcome!</h2>
       <h2 class="welcome-lets">Lets start using</h2>
       <div class="welcome-links">
@@ -11,10 +13,10 @@
           <picture class="img-link-blue img-link-picture">
             <img class="img-link" src="../assets/voting.png" alt="VOTING">
           </picture>
-          <h6 class="welcome-link-text">VOTING</h6>
+          <h6 class="welcome-link-text">SEARCH</h6>
         </div>
         <div class="welcome-link-div" (click)="toFavoritesDogs()">
-          <picture class="img-link-green img-link-picture" >
+          <picture class="img-link-green img-link-picture">
             <img class="img-link" src="../assets/dog.png" alt="BREEDS">
           </picture>
           <h6 class="welcome-link-text">FAVORITE DOGS</h6>
@@ -29,6 +31,8 @@
     </div>
 
     <div class="right">
+      <!-- [ngClass]="{'show':!active,'hidden':active}" -->
+
       <router-outlet></router-outlet>
     </div>
 

@@ -1,4 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { AnimalClass } from './voting/animalClass';
@@ -16,8 +16,6 @@ export class ServiceService {
 
   fetchCats(): void {
     this.http.get("https://api.thecatapi.com/v1/breeds?"
-    //  "https://api.thedogapi.com/v1/breeds?"
-      // { headers: new HttpHeaders({ "x-api-key": "c89d00db-95c6-4542-bed0-1e1379eb4dfb" }).set("Content-Type", "application/json") }
     ).subscribe((response) => {
        let catsList = response as any[]
       catsList = catsList.filter(e => e.image != undefined)
@@ -34,7 +32,6 @@ export class ServiceService {
 
   fetchDogs(): void {
     this.http.get("https://api.thedogapi.com/v1/breeds?"
-      // { headers: new HttpHeaders({ "x-api-key": "c89d00db-95c6-4542-bed0-1e1379eb4dfb" }).set("Content-Type", "application/json") }
     ).subscribe((response) => {
       let dogsList = response as any[]
       dogsList = dogsList.filter(e => e.image != undefined)

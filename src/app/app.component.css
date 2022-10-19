@@ -12,9 +12,9 @@
     position: fixed;
 }
 
-.cat-app{
-font-size: 1.3em;
-color:#ff5c66;
+.cat-app {
+    font-size: 1.3em;
+    color: #ff5c66;
 }
 
 .welcome-welcome {
@@ -47,17 +47,17 @@ color:#ff5c66;
     height: 100%;
     border: 3px solid rgba(255, 255, 224, 0.712);
     display: flex;
-    align-items:center;
+    align-items: center;
     justify-content: center;
 }
 
-.heart{
-width: 120%;
-padding-left: 10%;
+.heart {
+    width: 120%;
+    padding-left: 10%;
 }
 
 .welcome-lets {
-    margin: 15% 0 4% 20% ;
+    margin: 15% 0 4% 20%;
     font-size: 1.5em;
     color: rgba(248, 44, 21, 0.712);
 }
@@ -105,10 +105,51 @@ padding-left: 10%;
 
 /* ------------------------------------ right side -------------------------------------------------- */
 
-.right{
+.right {
     width: 60%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        margin-top: 2%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 2%;
+}
+
+@media screen and (max-width: 768px) {
+    .hidden {
+        display: none;
+    }
+
+    .show {
+        display: block;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+        .cat-app {
+            margin: 0;
+            text-align: center;
+        }
+
+    .welcome-left {
+        width: 99%;
+        position: static;
+    }
+
+    .right {
+        width: 100%;
+        position: static;
+        padding-top: 3%;
+    }
+
+    .welcome-lets {
+        margin: 0;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .welcome-welcome {
+        font-size: 1.5em;
+        margin: 0;
+    }
 }

@@ -9,7 +9,7 @@ import { ServiceService } from './service.service';
 })
 
 export class AppComponent implements OnInit {
-
+active:boolean;
   title = "cat-app"
   constructor(
     private router: Router,
@@ -19,15 +19,21 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.service.fetchCats();
     this.service.fetchDogs();
+    this.active = true;
   }
 
   toVoting(): void {
-    this.router.navigate(["voting"]);
+    this.router.navigate(["search"]);
+    this.active = false;
   }
   toFavoritesDogs(): void {
     this.router.navigate(["favorites-dogs"]);
+    this.active = false;
+
   }
   toFavoritesCats(): void {
     this.router.navigate(["favorites-cats"]);
+    this.active = false;
+
   }
 }

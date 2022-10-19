@@ -16,7 +16,8 @@ export class FavoritesDogsComponent implements OnInit {
   ngOnInit(): void {
     this.favorites = JSON.parse(localStorage.getItem(("favoritesDogs")) as string);
     this.likes = JSON.parse(localStorage.getItem(("likesDog")) as string);
-    this.likes.forEach((l) => {
+    if (this.likes){
+      this.likes.forEach((l) => {
       this.favorites.forEach((f) => {
         if (l.name === f.name) {
           f.dislike = l.dislike;
@@ -25,6 +26,8 @@ export class FavoritesDogsComponent implements OnInit {
       }
       )
     })
+    }
+    
   }
 
   deleteDogfromFavorites(del: any) {

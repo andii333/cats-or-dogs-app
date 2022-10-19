@@ -11,7 +11,7 @@ const routes: Routes = [
     path: '', component: WelcomeComponent , 
   },
   {
-    path: 'voting', component: VotingComponent , 
+    path: 'search', component: VotingComponent , 
   },
   {
     path: 'favorites-dogs', component: FavoritesDogsComponent , 

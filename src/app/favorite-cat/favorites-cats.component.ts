@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CountService } from '../count.service';
 import { ServiceService } from '../service.service';
 import { AnimalClass } from '../voting/animalClass';
 
@@ -22,7 +21,7 @@ export class FavoritesCatsComponent implements OnInit {
         if (l.name === f.name) {
           f.dislike = l.dislike;
           f.like = l.like;
-         } 
+        }
       }
       )
     })

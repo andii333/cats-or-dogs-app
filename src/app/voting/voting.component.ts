@@ -33,12 +33,12 @@ export class VotingComponent implements OnInit, AfterContentChecked {
   }
 
   ngOnInit(): void {
-    if (this.favoritesCats) {
+    if (localStorage.getItem("favoritesCats") != null ) {
       this.favoritesCats = JSON.parse(localStorage.getItem("favoritesCats") as string)
     } else {
       this.favoritesCats = []
     }
-    if (this.favoritesDogs) {
+    if (localStorage.getItem("favoritesDogs") != null ) {
       this.favoritesDogs = JSON.parse(localStorage.getItem("favoritesDogs") as string)
     } else {
       this.favoritesDogs = []
