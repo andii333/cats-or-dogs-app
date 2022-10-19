@@ -198,8 +198,8 @@ overflow-x: hidden;
 }
 
 .turn {
-    width:10vw;
-    height:10vw;
+    width:8vw;
+    height:8vw;
 }
 
 .left {
@@ -232,6 +232,11 @@ width: 10vw;
 
 .image-action {
     margin-top: 10vw;
+}
+
+.previously-img {
+    width: 3vw;
+    height: 5vw;
 }
 
 }
