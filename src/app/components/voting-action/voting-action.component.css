@@ -1,0 +1,136 @@
+.container {
+  padding: 16px;
+}
+
+.input-field {
+  background-color: #FBE0DC;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  height: 60px;
+  justify-content: center;
+}
+
+.input-lable {
+  color: #FF4081;
+  font-size: 12px;
+  text-align: center;
+}
+
+.input-select {
+  outline: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  width: 100%;
+}
+
+.input-select::-webkit-scrollbar {
+  display: none;
+}
+
+.input-option {
+  font-size: 20px;
+}
+
+.name-box {
+  display: flex;
+  justify-content: center;
+}
+
+.name {
+  background-color: #FBE0DC;
+  font-size: 1em;
+  color: #FF4081;
+  padding: 8px 12px;
+  border-radius: 12px;
+  letter-spacing: 2px;
+}
+
+
+.image {
+  width: 80%;
+  height: 500px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.field {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4%;
+  position: relative;
+}
+
+.turn-img {
+  width: 16px;
+  height: 16px;
+}
+
+.turn {
+  border-radius: 10px;
+  border: 1px solid #FF868E;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 2%;
+  position: absolute;
+  cursor: pointer;
+  top: 200px;
+}
+
+.left {
+  left: -16px;
+}
+
+.right {
+  transform: rotate(180deg);
+  right: -16px;
+}
+
+.add-likes-box {
+  display: flex;
+  width: 180px;
+  height: 60px;
+  position: absolute;
+  bottom: -70px;
+  border: 1px solid white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.add-like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  border: none;
+}
+
+.smile {
+  background-color: #acea97;
+}
+
+.heart {
+  background-color: #FF868E;
+  color: rgb(207, 207, 207);
+  font-size: 2rem;
+}
+
+.red{
+  color: rgb(223, 12, 12);
+}
+
+.dislike {
+  background-color: #fadda6;
+}
+
+/* -----------------------------------media------------------------------------------------------- */
+
+@media screen and (max-width: 768px) {}
