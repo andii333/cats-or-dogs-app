@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ServiceService } from './service.service';
+import { FromFirestoreService } from './services/from-fairestore.service';
 
 @Component({
   selector: 'app-root',
@@ -13,17 +13,15 @@ active:boolean;
   title = "cat-app"
   constructor(
     private router: Router,
-    public service: ServiceService
+    public fromFirebase: FromFirestoreService,
   ) { }
 
   ngOnInit(): void {
-    this.service.fetchCats();
-    this.service.fetchDogs();
     this.active = true;
   }
 
   toVoting(): void {
-    this.router.navigate(["search"]);
+    this.router.navigate(["search/cat/1"]);
     this.active = false;
   }
   toFavoritesDogs(): void {

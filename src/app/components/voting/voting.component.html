@@ -1,0 +1,10 @@
+<header>
+
+  <button class="breed-btn" [ngClass]="{cat:cats}" (click)="chooseAnimals('cat')">🐱</button>
+  <button class="breed-btn" [ngClass]="{dog:!cats}" (click)="chooseAnimals('dog')">🐶</button>
+
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

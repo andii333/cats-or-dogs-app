@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../service.service';
-import { AnimalClass } from '../voting/animalClass';
+import { AnimalClass } from '../../classes/animalClass';
+import { FromFirestoreService } from 'src/app/services/from-fairestore.service';
 
 @Component({
   selector: 'app-favorites-dogs',
@@ -11,10 +11,10 @@ export class FavoritesDogsComponent implements OnInit {
   favorites: AnimalClass[];
   likes: AnimalClass[];
 
-  constructor(public service: ServiceService) { }
+  constructor(private serviceFrom: FromFirestoreService) { }
 
   ngOnInit(): void {
-    this.favorites = JSON.parse(localStorage.getItem(("favoritesDogs")) as string);
+    this.favorites = JSON.parse(localStorage.getItem(("dogFavorite")) as string);
     this.likes = JSON.parse(localStorage.getItem(("likesDog")) as string);
     if (this.likes){
       this.likes.forEach((l) => {
@@ -27,12 +27,11 @@ export class FavoritesDogsComponent implements OnInit {
       )
     })
     }
-    
   }
 
   deleteDogfromFavorites(del: any) {
     const index = this.favorites.findIndex((e: { name: any; }) => e === del);
     this.favorites.splice(index, 1)
-    localStorage.setItem("favoritesDogs", JSON.stringify(this.favorites))
+    localStorage.setItem("dogFavorite", JSON.stringify(this.favorites))
   }
 }
