@@ -10,7 +10,7 @@ import { FromFirestoreService } from './services/from-fairestore.service';
 
 export class AppComponent implements OnInit {
 active:boolean;
-  title = "cat-app"
+  title = "Cats-or-Dogs-app"
   constructor(
     private router: Router,
     public fromFirebase: FromFirestoreService,

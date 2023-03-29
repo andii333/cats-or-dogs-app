@@ -1,152 +1,150 @@
 .body {
-    background-color: rgb(250, 201, 208);
-    width: 97%;
-    margin-bottom: 3%;
-    border-radius: 2%;
+  background-color: rgb(250, 201, 208);
+  width: 97%;
+  margin-bottom: 3%;
+  border-radius: 2%;
 }
 
 .favorite {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .img-field {
-    display: flex;
-    position: relative;
-    width: min-content;
-    margin: 3% 0;
-    cursor: pointer;
+  display: flex;
+  position: relative;
+  width: min-content;
+  margin: 24px 0;
 }
 
 .image:active {
-    width: 60vw;
-    height: auto;
-    position: fixed;
-    top: 2%;
-    left: 20%;
-    z-index: 2;
+  width: 60vw;
+  height: auto;
+  max-height: 80vh;
+  position: fixed;
+  top: 2%;
+  left: 20%;
+  z-index: 2;
+  object-fit: contain;
 }
 
 .image {
-    height: 15vw;
-    border-radius: 5%;
+  height: 15vw;
+  min-width: 140px;
+  border-radius: 5%;
+  object-fit: contain;
 }
 
 .delete {
-    display: none;
+  display: none;
 }
 
 .img-field:hover .delete {
+  display: block;
+  width: 1.5vw;
+  height: 1.5vw;
+  position: absolute;
+  left: 1%;
+  top: 1%;
+  cursor: pointer;
+  border-radius: 7%;
+  border: none;
+  background-color: rgb(250, 237, 239);
+  color: red;
+  padding: 0;
+  font-size: 1em;
+}
+
+.like-box {
+  width: 2vw;
+  height: 3vw;
+  position: absolute;
+  font-size: 1em;
+  display: flex;
+}
+
+.box-img {
+  width: 2vw;
+  height: 2vw;
+  margin-right: 0.5vw;
+}
+
+.like-img {
+  right: 63%;
+  bottom: -21%;
+  cursor: pointer;
+}
+
+.dislike-img {
+  right: 31%;
+  bottom: -21%;
+  cursor: pointer;
+}
+
+.like {
+  width: 2vw;
+  right: 63%;
+  bottom: -21%;
+  color: rgb(10, 179, 10);
+}
+
+.dislike {
+  width: 2vw;
+  right: 31%;
+  bottom: -21%;
+  color: rgb(209, 18, 18);
+}
+
+@media screen and (max-width:768px) {
+  .image {
+    width: 45vw;
+    height: fit-content;
+  }
+
+  .img-field {
+    flex-direction: column;
+    margin: 1vw;
+    position: relative;
+  }
+
+  .delete {
     display: block;
-    width: 1.5vw;
-    height: 1.5vw;
     position: absolute;
     left: 1%;
     top: 1%;
     cursor: pointer;
-    border-radius: 7%;
+    border-radius: 15%;
     border: none;
-    background-color: rgb(250, 237, 239);
     color: red;
     padding: 0;
-    font-size: 1em;
-}
+    width: 1rem;
+    height: 1rem;
+    font-size: 1rem;
+  }
 
-.like-box {
-    width: 2vw;
-    height: 3vw;
-    position: absolute;
-    font-size: 1em;
+  .like-box {
+    position: static;
+  }
+
+  .box-img {
+    width: 5vw;
+    height: 5vw;
+    margin-top: 1vw;
+  }
+
+  .likes {
     display: flex;
-}
+    justify-content: space-around;
+    align-items: baseline;
+  }
 
-.box-img {
-    width: 2vw;
-    height: 2vw;
-    margin-right: 0.5vw;
-}
-
-.like-img {
-    right: 63%;
-    bottom: -21%;
-}
-
-.dislike-img {
-    right: 31%;
-    bottom: -21%;
-}
-
-.like {
-    width: 2vw;
-    right: 63%;
-    bottom: -21%;
-    color: rgb(10, 179, 10);
-}
-
-.dislike {
-    width: 2vw;
-    right: 31%;
-    bottom: -21%;
-    color: rgb(209, 18, 18);
-}
-
-@media screen and (max-width:768px) {
-    
-    .image {
-        width: 45vw;
-        height: fit-content;
-    }
-
-    .img-field {
-        flex-direction: column;
-        margin: 1vw;
-        position: relative;
-    }
-
-    .delete {
-        display: block;
-        position: absolute;
-        left: 1%;
-        top: 1%;
-        cursor: pointer;
-        border-radius: 15%;
-        border: none;
-        color: red;
-        padding: 0;
-        width: 1rem;
-        height: 1rem;
-        font-size: 1rem;
-    }
-
-    .img-field:hover .delete {
-        width: 1rem;
-        height: 1rem;
-        font-size: 1rem;
-    }
-
-    .like-box {
-        position: static;
-    }
-
-    .box-img {
-        width: 5vw;
-        height: 5vw;
-        margin-top: 1vw;
-    }
-
-    .likes {
-        display: flex;
-        justify-content: space-around;
-        align-items: baseline;
-    }
-
-    .image:active {
-        width: 95vw;
-        height: auto;
-        position: fixed;
-        top: 2%;
-        left: 2.5%;
-        z-index: 2;
-    }
+  .image:active {
+    width: 95vw;
+    height: auto;
+    position: fixed;
+    top: 2%;
+    left: 2.5%;
+    z-index: 2;
+  }
 }

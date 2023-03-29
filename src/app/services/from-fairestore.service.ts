@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { doc, DocumentData, getDoc, getFirestore, setDoc } from "firebase/firestore";
+import { doc, DocumentData, getDoc, getFirestore } from "firebase/firestore";
 import { initializeApp } from 'firebase/app';
 import { environment } from 'src/environments/environment';
 import { Animal, AnimalDictionary } from '../inrefaces/animal';

@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import {
-  Router, Resolve,
+  Resolve,
   RouterStateSnapshot,
   ActivatedRouteSnapshot
 } from '@angular/router';
-import { Observable, of } from 'rxjs';
-import { Animal, AnimalDictionary } from '../inrefaces/animal';
+import {AnimalDictionary } from '../inrefaces/animal';
 import { FromFirestoreService } from '../services/from-fairestore.service';
 
 @Injectable({
@@ -13,7 +12,7 @@ import { FromFirestoreService } from '../services/from-fairestore.service';
 })
 export class CatsListResolver implements Resolve<AnimalDictionary> {
   constructor(private fromFairebase:FromFirestoreService){}
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<AnimalDictionary> {
+  resolve(): Promise<AnimalDictionary> {
     return this.fromFairebase.getCatsList();
   }
 }

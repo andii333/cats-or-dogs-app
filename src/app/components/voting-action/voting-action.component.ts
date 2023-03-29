@@ -1,10 +1,9 @@
-import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BehaviorSubject, Observable, Subject, Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { Animal } from 'src/app/inrefaces/animal';
 import { FromFirestoreService } from 'src/app/services/from-fairestore.service';
 import { StorageService } from 'src/app/services/storage.service';
-import { VotingComponent } from '../voting/voting.component';
 
 @Component({
   selector: 'app-voting-action',
