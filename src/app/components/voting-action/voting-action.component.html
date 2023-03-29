@@ -23,11 +23,11 @@
 
     <div class="add-likes-box">
       <button class="add-like like" [disabled]="!favorite" (click)="addLike(animal.id, 'like')">
-        <span *ngIf="like > 0" class="like-number">{{like}}</span><img class="like-img" src="assets/like.png">
+        <span *ngIf="like > 0" class="like-number ">{{like}}</span> &#9786;
       </button>
       <button class="add-like heart" [ngClass]="{'red': favorite}" (click)="toFavorite(animal)">&#10084;</button>
       <button class="add-like dislike" [disabled]="!favorite" (click)="addLike(animal.id, 'dislike')">
-        <img class="like-img" src="assets/dislike.png"><span class="like-number" *ngIf="dislike > 0">{{dislike}}</span>
+        &#9785; <span class="dislike-number" *ngIf="dislike > 0">{{dislike}}</span>
       </button>
     </div>
   </div>
