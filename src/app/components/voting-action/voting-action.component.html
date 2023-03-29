@@ -18,18 +18,16 @@
       <a class="read-more" *ngIf="animal.wikipediaUrl" href={{animal.wikipediaUrl}} target="_blank">read more...</a>
     </p>
 
-    <button class="turn left" (click)="changeImage('previouse')"><img class="turn-img" src="assets/previocly.png"
-        alt="previously"></button>
-    <button class="turn right" (click)="changeImage('next')"><img class="turn-img" src="assets/previocly.png"
-        alt="previously"></button>
+    <button class="arrow left" (click)="changeImage('previouse')"><</button>
+    <button class="arrow right" (click)="changeImage('next')"><</button>
 
     <div class="add-likes-box">
       <button class="add-like like" [disabled]="!favorite" (click)="addLike(animal.id, 'like')">
-        <span *ngIf="like > 0" class="like-number">{{like}}</span><img class="smile" src="assets/smile.svg">
+        <span *ngIf="like > 0" class="like-number">{{like}}</span><img class="like-img" src="assets/like.png">
       </button>
       <button class="add-like heart" [ngClass]="{'red': favorite}" (click)="toFavorite(animal)">&#10084;</button>
       <button class="add-like dislike" [disabled]="!favorite" (click)="addLike(animal.id, 'dislike')">
-        <img class="smile" src="assets/not-smile.svg"><span class="like-number" *ngIf="dislike > 0">{{dislike}}</span>
+        <img class="like-img" src="assets/dislike.png"><span class="like-number" *ngIf="dislike > 0">{{dislike}}</span>
       </button>
     </div>
   </div>

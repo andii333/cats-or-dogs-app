@@ -77,12 +77,9 @@
   color: #ff9fbf;
 }
 
-.turn-img {
-  width: 16px;
-  height: 16px;
-}
-
-.turn {
+.arrow {
+  font-size: 22px;
+  color: #FF4081;
   border-radius: 10px;
   border: 1px solid #FF868E;
   padding: 0;
@@ -155,12 +152,10 @@
   margin: 8px;
 }
 
-.smile{
-  width: 40px;
-  height: 40px;
+.like-img{
+  width: 32px;
+  height: 32px;
   margin: 0 8px;
 }
 
-/* -----------------------------------media------------------------------------------------------- */
 
-@media screen and (max-width: 768px) {}
