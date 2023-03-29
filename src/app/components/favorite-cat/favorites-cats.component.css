@@ -15,21 +15,25 @@
     display: flex;
     position: relative;
     width: min-content;
-    margin: 3% 0;
+    margin: 24px 0;
 }
 
 .image:active {
     width: 60vw;
     height: auto;
+    max-height: 80vh;
     position: fixed;
     top: 2%;
     left: 20%;
     z-index: 2;
+    object-fit: contain;
 }
 
 .image {
     height: 15vw;
+    min-width: 140px;
     border-radius: 5%;
+    object-fit: contain;
 }
 
 .delete {
@@ -69,11 +73,13 @@
 .like-img {
     right: 63%;
     bottom: -21%;
-}
+    cursor: pointer;
+  }
 
-.dislike-img {
+  .dislike-img {
     right: 31%;
     bottom: -21%;
+    cursor: pointer;
 }
 
 .like {

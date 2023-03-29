@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimalClass } from '../../classes/animalClass';
 import { FromFirestoreService } from 'src/app/services/from-fairestore.service';
+import { StorageService } from 'src/app/services/storage.service';
+import { Animal } from 'src/app/inrefaces/animal';
 
 @Component({
   selector: 'app-favorites-dogs',
@@ -8,30 +9,34 @@ import { FromFirestoreService } from 'src/app/services/from-fairestore.service';
   styleUrls: ['./favorites-dogs.component.css']
 })
 export class FavoritesDogsComponent implements OnInit {
-  favorites: AnimalClass[];
-  likes: AnimalClass[];
+  favorites: Animal[];
 
-  constructor(private serviceFrom: FromFirestoreService) { }
+  constructor(
+    private storageService: StorageService,
+    ) { }
 
   ngOnInit(): void {
-    this.favorites = JSON.parse(localStorage.getItem(("dogFavorite")) as string);
-    this.likes = JSON.parse(localStorage.getItem(("likesDog")) as string);
-    if (this.likes){
-      this.likes.forEach((l) => {
-      this.favorites.forEach((f) => {
-        if (l.name === f.name) {
-          f.dislike = l.dislike;
-          f.like = l.like;
-        }
-      }
-      )
-    })
-    }
+    this.favorites = this.storageService.getDogFavorite();
   }
 
-  deleteDogfromFavorites(del: any) {
-    const index = this.favorites.findIndex((e: { name: any; }) => e === del);
-    this.favorites.splice(index, 1)
-    localStorage.setItem("dogFavorite", JSON.stringify(this.favorites))
+  deleteDogfromFavorites(id: number) {
+    const index = this.favorites.findIndex(dog => dog.id === id);
+    this.favorites.splice(index, 1);
+    this.storageService.updateDogFavorite(this.favorites)
   }
+
+  like(like:string, id:number):void{
+    const dogs = this.storageService.getDogFavorite()
+    const index = dogs.findIndex(dog => dog.id === id);
+    if (like === 'like') {
+      if (dogs[index].like) { (dogs[index].like as number) += 1 } else { dogs[index].like = 1 }
+      this.favorites[index].like = dogs[index].like
+    }
+    if (like === 'dislike') {
+      if (dogs[index].dislike) { (dogs[index].dislike as number) += 1 } else { dogs[index].dislike = 1 }
+      this.favorites[index].dislike = dogs[index].dislike
+    }
+    this.storageService.updateDogFavorite(dogs);
+  }
+
 }

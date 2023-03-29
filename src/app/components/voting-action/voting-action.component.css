@@ -50,6 +50,12 @@
   letter-spacing: 2px;
 }
 
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 
 .image {
   width: 80%;
@@ -58,11 +64,17 @@
   object-fit: contain;
 }
 
-.field {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 4%;
-  position: relative;
+.description {
+  margin: 16px;
+  text-align: justify;
+}
+
+.read-more {
+  color: #FF4081;
+}
+
+.read-more:visited {
+  color: #ff9fbf;
 }
 
 .turn-img {
@@ -96,10 +108,7 @@
 
 .add-likes-box {
   display: flex;
-  width: 180px;
   height: 60px;
-  position: absolute;
-  bottom: -70px;
   border: 1px solid white;
   border-radius: 15px;
   overflow: hidden;
@@ -109,26 +118,47 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
+  min-width: 40px;
   border: none;
+  cursor: pointer;
 }
 
-.smile {
+.add-like:disabled {
+  opacity: 0.4;
+}
+
+.like {
   background-color: #acea97;
+  color: #2e8d0f;
+  font-size: 50px;
 }
 
 .heart {
   background-color: #FF868E;
   color: rgb(207, 207, 207);
-  font-size: 2rem;
+  font-size: 40px;
 }
 
-.red{
+.red {
   color: rgb(223, 12, 12);
 }
 
 .dislike {
+  font-size: 34px;
   background-color: #fadda6;
+  color: #d36912;
+  font-weight: 500;
+}
+
+.like-number {
+  font-size: 20px;
+  margin: 8px;
+}
+
+.smile{
+  width: 40px;
+  height: 40px;
+  margin: 0 8px;
 }
 
 /* -----------------------------------media------------------------------------------------------- */

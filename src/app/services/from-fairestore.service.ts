@@ -52,49 +52,6 @@ export class FromFirestoreService {
     return this.dogsList
   }
 
-  getCatFavorite(): Animal[] {
-    if (localStorage.getItem('catFavorite') === null) { return [] } else {
-      return JSON.parse(localStorage.getItem('catFavorite') as string)
-    }
-  }
-  getDogFavorite(): Animal[] {
-    if (localStorage.getItem('dogFavorite') === null) { return [] } else {
-      return JSON.parse(localStorage.getItem('dogFavorite') as string)
-    }
-  }
-
-  addToCatFavorite(animal: Animal): void {
-    const catFavorite = JSON.parse(localStorage.getItem('catFavorite') as string)
-    if (catFavorite) {
-      const index = catFavorite.findIndex((e: Animal) => e.name === animal.name)
-      console.log('index', index)
-      if (index === -1) {
-        localStorage.setItem('catFavorite', JSON.stringify([...catFavorite, animal]))
-      } else {
-        catFavorite.splice(index, 1);
-        localStorage.setItem('catFavorite', JSON.stringify(catFavorite))
-      }
-    } else {
-      localStorage.setItem('catFavorite', JSON.stringify([animal]))
-    }
-  }
-
-  addToDogFavorite(animal: Animal): void {
-    const dogFavorite = JSON.parse(localStorage.getItem('dogFavorite') as string)
-    if (dogFavorite) {
-      const index = dogFavorite.findIndex((e: Animal) => e.name === animal.name)
-      console.log('index', index)
-      if (index === -1) {
-        localStorage.setItem('dogFavorite', JSON.stringify([...dogFavorite, animal]))
-      } else {
-        dogFavorite.splice(index, 1);
-        localStorage.setItem('dogFavorite', JSON.stringify(dogFavorite))
-      }
-    } else {
-      localStorage.setItem('dogFavorite', JSON.stringify([animal]))
-    }
-  }
-
   chooseAnimals(type: string): void {
     this.type = type;
     type === 'cat' ? this._animals.next(this.catsList) : this._animals.next(this.dogsList);

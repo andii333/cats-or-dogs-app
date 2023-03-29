@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AnimalClass } from '../../classes/animalClass';
+import { Animal } from 'src/app/inrefaces/animal';
+import { StorageService } from 'src/app/services/storage.service';
 
 @Component({
   selector: 'app-favorites-cats',
@@ -7,29 +8,33 @@ import { AnimalClass } from '../../classes/animalClass';
   styleUrls: ['./favorites-cats.component.css']
 })
 export class FavoritesCatsComponent implements OnInit {
-  favorites: AnimalClass[];
-  likes: AnimalClass[];
+  favorites: Animal[];
 
-  // constructor(public service: ServiceService) { }
+  constructor(
+    private storageService: StorageService,
+  ) { }
 
   ngOnInit(): void {
-    this.favorites = JSON.parse(localStorage.getItem(("catFavorite")) as string);
-    console.log('this.favorite', this.favorites)
-    // this.likes = JSON.parse(localStorage.getItem(("likesCat")) as string);
-    // this.likes.forEach((l) => {
-    //   this.favorites.forEach((f) => {
-    //     if (l.name === f.name) {
-    //       f.dislike = l.dislike;
-    //       f.like = l.like;
-    //     }
-    //   }
-    //   )
-    // })
+    this.favorites = this.storageService.getCatFavorite();
   }
 
-  deleteCatfromFavorites(del: any) {
-    const index = this.favorites.findIndex((e: { name: any; }) => e === del);
-    this.favorites.splice(index, 1)
-    localStorage.setItem("catFavorite", JSON.stringify(this.favorites))
+  deleteCatfromFavorites(id: number) {
+    const index = this.favorites.findIndex(cat => cat.id === id);
+    this.favorites.splice(index, 1);
+    this.storageService.updateCatFavorite(this.favorites)
+  }
+
+  like(like: string, id: number): void {
+    const cats = this.storageService.getCatFavorite()
+    const index = cats.findIndex(cat => cat.id === id);
+    if (like === 'like') {
+      if (cats[index].like) { (cats[index].like as number) += 1 } else { cats[index].like = 1 }
+      this.favorites[index].like = cats[index].like
+    }
+    if (like === 'dislike') {
+      if (cats[index].dislike) { (cats[index].dislike as number) += 1 } else { cats[index].dislike = 1 }
+      this.favorites[index].dislike = cats[index].dislike
+    }
+    this.storageService.updateCatFavorite(cats);
   }
 }

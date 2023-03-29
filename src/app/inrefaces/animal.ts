@@ -4,7 +4,7 @@ export interface Animal {
   image: string;
   like?: number
   dislike?: number
-  wikipedia_url?: string;
+  wikipediaUrl?: string;
   description?: string;
 }
 

@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
-import { AnimalClass } from '../../classes/animalClass';
 import { FromFirestoreService } from 'src/app/services/from-fairestore.service';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -14,8 +13,6 @@ export class VotingComponent implements OnInit, OnDestroy {
 
   subscriptions = new Subscription;
   cats: boolean = true;
-  favoritesCats: AnimalClass[];
-  favoritesDogs: AnimalClass[];
 
   constructor(
     private route: ActivatedRoute,
